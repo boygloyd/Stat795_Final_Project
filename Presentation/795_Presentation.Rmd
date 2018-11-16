@@ -1,0 +1,68 @@
+---
+title: "Callaway Gold Project"
+subtitle: "Stat 795 Final Project"
+author: "Aditya, Josh, Kelso"
+header-includes:
+  - \usepackage{themes/beamertheme795}
+output: beamer_presentation
+---
+
+```{r, echo=FALSE, include=FALSE}
+# Load in libraries
+
+rm(list=ls(all=TRUE)) # remove all previous objects from memory
+options(warn=-1)  # forces R to ignore all warning messages
+
+```
+
+<!-- slide 2 -->
+
+## Outline
+
+- Background
+- Exploratory Data Analysis
+- Model Selection/Diagnostics
+- Inferences
+
+<!-- slide 3 -->
+
+## Data Set
+
+
+<!-- slide 4 -->
+
+## Exploratory Data Analysis
+
+<!-- slide 5 -->
+
+## Exploratory Data Analysis
+
+###The relationship between the predictor variables
+
+<!-- slide 6 -->
+
+## Model Selection
+
+<!-- slide 7 -->
+
+## Model Selection
+
+<!-- slide 8 -->
+
+## Model Selection
+
+<!-- slide 9 -->
+
+## Model Diagnostics
+
+<!-- slide 10 -->
+
+## Inferences
+
+<!-- slide 11 -->
+
+## Inferences
+
+<!-- slide 12 -->
+
+## Conclusion

@@ -1,0 +1,79 @@
+% Preface required in the knitr RnW file
+\documentclass{article}
+
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{listings} % allows for importing code scripts into the tex file
+\usepackage{wrapfig}
+\usepackage{dcolumn}
+\usepackage{placeins}
+
+% Approximately 1 inch borders all around
+\setlength\topmargin{-.56in}
+\setlength\evensidemargin{0in}
+\setlength\oddsidemargin{0in}
+\setlength\textwidth{6.49in}
+\setlength\textheight{8.6in}
+
+% Options for code listing; from Patrick DeJesus, October 2016
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+%"mystyle" code listing set
+\lstset{style=mystyle}
+%\lstset{inputpath=appendix/}
+
+\title{Callaway Golf Project} \\
+\large Stat 795 \\
+\author{Aditya, Josh, Kelso }
+\date{\today}
+
+\begin{document} 
+\maketitle
+
+% Code to start knitr
+<<include=FALSE>>=
+  library(knitr)
+opts_chunk$set(
+  concordance=TRUE
+)
+@
+
+\section*{Executive Summary}
+
+
+\section*{Introduction}
+
+\section*{Methods}
+
+\section*{Results}
+
+\section*{Conclusion}
+
+
+% \newpage
+% \noindent \Large{{\bf Appendix}}
+% \lstinputlisting[language=R, caption = Code Used for Data Analysis]{795_DA.R}
+
+\end{document}
