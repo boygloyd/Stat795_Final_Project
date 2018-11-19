@@ -77,6 +77,12 @@ colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp",
 
 \section*{Results}
 
+\subsection*{Experimental Design}
+
+\subsection*{Exploratory Data Analysis}
+
+\subsection*{Results}
+
 \section*{Conclusion}
 
 
