@@ -60,6 +60,14 @@ opts_chunk$set(
 )
 @
 
+<<Load libraries and dataset, echo=FALSE>>=
+#Load Libraries
+
+#Load Dataset
+golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
+colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "rolling", "total_distance", "t_disp", "traj")
+@
+
 \section*{Executive Summary}
 
 

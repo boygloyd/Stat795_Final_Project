@@ -10,9 +10,13 @@ output: beamer_presentation
 ```{r, echo=FALSE, include=FALSE}
 # Load in libraries
 
+
 rm(list=ls(all=TRUE)) # remove all previous objects from memory
 options(warn=-1)  # forces R to ignore all warning messages
 
+#Load in dataset
+golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
+colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "rolling", "total_distance", "t_disp", "traj")
 ```
 
 <!-- slide 2 -->
