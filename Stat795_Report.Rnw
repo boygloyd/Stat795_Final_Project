@@ -65,7 +65,7 @@ opts_chunk$set(
 
 #Load Dataset
 golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
-colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "rolling", "total_distance", "t_disp", "traj")
+colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp", "total_distance", "t_disp", "traj")
 @
 
 \section*{Executive Summary}
