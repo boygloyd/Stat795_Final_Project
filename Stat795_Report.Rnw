@@ -44,7 +44,7 @@
 \lstset{style=mystyle}
 %\lstset{inputpath=appendix/}
 
-\title{Callaway Golf Project} \\
+\title{Golf Project} \\
 \large Stat 795 \\
 \author{Aditya, Josh, Kelso }
 \date{\today}
@@ -70,18 +70,19 @@ colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp",
 
 \section*{Executive Summary}
 
-The golf ball manufacturer, Titlest, have claims against them that their all new balls are not performing to standard. In addition, there are lawsuits saying that the company is taking nearly new balls or slightly used balls and either washing or refurbish them, then selling them off as new golf balls. The model of ball in question is NewProV1392. 
 %%%%% not done. missing results %%%%
+
+The golf ball manufacturer, Titlest, have claims against them that their all new balls are not performing to standard. In addition, there are lawsuits saying that the company is taking nearly new balls or slightly used balls and either washing or refurbish them, then selling them off as new golf balls. The model of ball in question is ProV1392. 
 
 \section*{Introduction}
 
 In golf, players want to minimize the number of strokes/hits. The best players will have scores or strokes below par. Par is the standard number of strokes needed to make the ball into the hole. In tournaments, players will have negative scores which means that players have repeatedly par. That’s a good thing. In fact, the least amount of stroke made during a game or tournament wins. Tournaments will consistently see negative scores, but a tampered or old ball will affect a player’s game and their number of strokes needed to make the ball.   
-The golfing associations which govern the size of golf balls, R&A and United States Golf Association, specify that the mass of a ball must be no more than 1.620 oz and have a diameter at least 1.680 inches. Any golf balls that do not meet those regulations cannot be used in tournaments. The company Titlest are being sued because some of their new balls are performing below standard. This analysis is to find out if the company is truly washing and refurbishing their balls (NewProV1392 model) and selling them as new. 
+The golfing associations which govern the size of golf balls, R&A and United States Golf Association, specify that the mass of a ball must be no more than 1.620 oz and have a diameter at least 1.680 inches. Any golf balls that do not meet those regulations cannot be used in tournaments. The company Titlest are being sued because some of their new balls are performing below standard. This analysis is to find out if the company is truly washing and refurbishing their balls (ProV1392 model) and selling them as new. 
 
 \section*{Methods}
+
 Hit number is just the observation number. Block is which group the ball is in. Total is the total distance the ball has moved. Carry is the distance from hitting the ball and where it initially lands. Ball model is whether the ball is whether the ball is a brand-new ball, washed ball, or a refurbished ball. C_ground is the how far the ball rolled after the initial landing of the ball. Traj is the angle which the ball’s path has taken. Total dispersion is the distance away from where the ball would have gone if its trajectory was straight or centerline. Ballnum is the id of the ball. 
 There were no observations excluded nor included. This analysis is going to use R/RStudio software.
-
 
 \section*{Results}
 
