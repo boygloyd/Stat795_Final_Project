@@ -71,23 +71,39 @@ colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp",
 \section*{Executive Summary}
 
 
+
 \section*{Introduction}
+
+
 
 \section*{Methods}
 
+
+
 \section*{Results}
+
+
 
 \subsection*{Experimental Design}
 
+%For right now this section is just word vomit (rough draft). Need to clean up later.
+
+In order to test to see if there is a difference in performance between brand new golf balls and the washed or refurbished golf balls that are being marketed as new, a well designed experiment must be created. 
+
 \subsection*{Exploratory Data Analysis}
 
-\subsection*{Results}
+
+
+\subsection*{Model Selection/Inferences}
+
+
 
 \section*{Conclusion}
 
 
-% \newpage
-% \noindent \Large{{\bf Appendix}}
-% \lstinputlisting[language=R, caption = Code Used for Data Analysis]{795_DA.R}
+
+\newpage
+\noindent \Large{{\bf Appendix}}
+\lstinputlisting[language=R, caption = Code Used for Data Analysis]{795_DA.R}
 
 \end{document}
