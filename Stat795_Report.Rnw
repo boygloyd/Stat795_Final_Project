@@ -97,9 +97,13 @@ Care must be taken to ensure that all locations are considered where both the ne
 
 (The sample size could be computed from a a sample size estimation where 80\% power is achieved. This would, of course, be based on the type of test being conducted.)
 
+Once the sample has been collected, golf balls will be placed into three seperate categories. New golf balls are balls that are actually new and never been used before. Washed golf balls are balls that are used, but simply washing them could get rid of any markings on them. Refurbished balls needed more than a simple washing.
+%(Ask what differentiates washed and refurbished)
+Each ball is then given a unique ball number so that they can be randomly selected during testing. 
+
 Once the sample has been collected a series of tests can be conducted to see if there truly is a difference in performance between the new balls and the refurbished balls. We will conduct one test at a time, because all that is needed to show that there is, in fact, a difference between the new balls and the refurbished ones is that they perform different in a single metric. The easiest metric to measure is distance, so that seems to be a good place to start.
 
-In order to reduce the amount of error in the model, a pressurized machine will be used to 
+In order to reduce the amount of error in the model, a pressurized machine will be used to ensure that the golf balls are being struck with the same amount of force. Multiple measurements will be taken to assess the distance of each ball. Carry distance will measure how far the ball travels in the air, and total distance will measure how far the ball travels after it is done rolling. As wind conditions can be a confounding factor in the experiment, a randomized complete block design will be used so that the wind conditions will be similar within each block. Two balls of each kind will be included in each block, and the machine will be recalibrated between blocks to assure that the force used to hit each ball is consistent.
 
 \subsection*{Exploratory Data Analysis}
 
