@@ -93,9 +93,13 @@ In order to test to see if there is a difference in performance between brand ne
 
 ##Things to consider##
 
-Care must be taken to ensure that all locations be considered where both the new and refurbished balls are being sold and then a certain amount of both new and refurbished balls be purchased randomly from these locations.
+Care must be taken to ensure that all locations are considered where both the new and refurbished balls are being sold and then a certain amount of both new and refurbished balls be purchased randomly from these locations. 
 
-Once the sample has been collected a series of tests can be conducted to see if there truly is a difference in performance between the new balls and the refurbished balls.
+(The sample size could be computed from a a sample size estimation where 80\% power is achieved. This would, of course, be based on the type of test being conducted.)
+
+Once the sample has been collected a series of tests can be conducted to see if there truly is a difference in performance between the new balls and the refurbished balls. We will conduct one test at a time, because all that is needed to show that there is, in fact, a difference between the new balls and the refurbished ones is that they perform different in a single metric. The easiest metric to measure is distance, so that seems to be a good place to start.
+
+In order to reduce the amount of error in the model, a pressurized machine will be used to 
 
 \subsection*{Exploratory Data Analysis}
 
