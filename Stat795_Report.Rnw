@@ -81,18 +81,21 @@ The golfing associations which govern the size of golf balls, R&A and United Sta
 
 \section*{Methods}
 
-Hit number is just the observation number. Block is which group the ball is in. Total is the total distance the ball has moved. Carry is the distance from hitting the ball and where it initially lands. Ball model is whether the ball is whether the ball is a brand-new ball, washed ball, or a refurbished ball. C_ground is the how far the ball rolled after the initial landing of the ball. Traj is the angle which the ball’s path has taken. Total dispersion is the distance away from where the ball would have gone if its trajectory was straight or centerline. Ballnum is the id of the ball. 
+Hit number is just the observation number. Block is which group the ball is in. Total is the total distance the ball has moved. Carry is the distance from hitting the ball and where it initially lands. Ball model is whether the ball is a brand-new ball, washed ball, or a refurbished ball. C_ground is the how far the ball rolled after the initial landing of the ball. Traj is the angle which the ball’s path has taken. Total dispersion is the distance away from where the ball would have gone if its trajectory was straight or centerline. Ballnum is the id of the ball. 
 There were no observations excluded nor included. This analysis is going to use R/RStudio software.
 
 \section*{Results}
-
-
-
 \subsection*{Experimental Design}
 
 %For right now this section is just word vomit (rough draft). Need to clean up later.
 
-In order to test to see if there is a difference in performance between brand new golf balls and the washed or refurbished golf balls that are being marketed as new, a well designed experiment must be created. 
+In order to test to see if there is a difference in performance between brand new golf balls and the washed or refurbished golf balls that are being marketed as new, a well designed experiment must be created. A key element in any well designed experiment is randomization. 
+
+##Things to consider##
+
+Care must be taken to ensure that all locations be considered where both the new and refurbished balls are being sold and then a certain amount of both new and refurbished balls be purchased randomly from these locations.
+
+Once the sample has been collected a series of tests can be conducted to see if there truly is a difference in performance between the new balls and the refurbished balls.
 
 \subsection*{Exploratory Data Analysis}
 
