@@ -14,6 +14,9 @@ block = as.factor(block)
 dim(golf) # 252 9
 names(golf)
 
+
+#test comment
+
 ############################
 # Exploratory Data Analysis
 ############################
