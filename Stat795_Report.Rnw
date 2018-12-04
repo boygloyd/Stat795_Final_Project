@@ -97,7 +97,7 @@ Care must be taken to ensure that all locations are considered where both the ne
 
 (The sample size could be computed from a a sample size estimation where 80\% power is achieved. This would, of course, be based on the type of test being conducted.)
 
-Once the sample has been collected, golf balls will be placed into three seperate categories. New golf balls are balls that are actually new and never been used before. Washed golf balls are balls that are used, but simply washing them could get rid of any markings on them. Refurbished balls needed more than a simple washing.
+Once the sample has been collected, golf balls will be placed into three seperate categories. New golf balls are balls that are actually new and never been used before. Washed golf balls are balls that are used, but simply washing them could get rid of any markings on them. Refurbished balls needed more than a simple washing, and need to be refinished in order for them to give the appearance of being a new golf ball.
 %(Ask what differentiates washed and refurbished) DONE
 Each ball is then given a unique ball number so that they can be randomly selected during testing. 
 
