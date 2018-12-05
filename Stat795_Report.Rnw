@@ -97,7 +97,7 @@ In order to test to see if there is a difference in performance between brand ne
 
 Care must be taken to ensure that all locations are considered where both the new and refurbished balls are being sold and then a certain amount of both new and refurbished balls be purchased randomly from these locations. 
 
-%(The sample size could be computed from a a sample size estimation where 80\% power is achieved. This would, of course, be based on the type of test being conducted.)
+(The sample size could be computed from a a sample size estimation where 80\% power is achieved. This would, of course, be based on the type of test being conducted.)
 
 Once the sample has been collected, golf balls will be placed into three seperate categories. New golf balls are balls that are actually new and never been used before. Washed golf balls are balls that are used, but simply washing them could get rid of any markings on them. Refurbished balls needed more than a simple washing, and need to be refinished in order for them to give the appearance of being a new golf ball. Each ball is then given a unique ball number so that they can be randomly selected during testing. 
 
@@ -105,9 +105,7 @@ Once the sample has been collected a series of tests can be conducted to see if 
 
 In order to reduce the amount of error in the model, a mechanical swing will be used to ensure that the golf balls are being struck with a similar amount of force. Multiple measurements will be taken to assess the distance of each ball. Carry distance will measure how far the ball travels in the air, and total distance will measure how far the ball travels after it is done rolling. As wind conditions can be a confounding factor in the experiment, a randomized complete block design will be used so that the wind conditions will be similar within each block. Two balls of each kind will be included in each block, and the machine will be recalibrated between blocks to ensure that the force used to hit each ball is consistent.
 
-In addition to the force being used to hit the ball, the trajectory of the ball will have an impact on how far each ball will travel. 
-%Different golfers hit the ball at different angles (improper swings)
-For this reason the trajectory of the ball after impact was measured for each ball.
+In addition to the force being used to hit the ball, the trajectory of the ball will have an impact on how far each ball will travel. Due to a variety of different reasons, different golfers hit the ball at different angles. Either they have drivers with different amounts of loft, they place the ball more forward or back in their stance or they fail to make contact with the ball at the optimal point in their swing. For these reasons the trajectory of the ball after impact was altered randomly for each shot and then measured. The trajectory for each shot was randomly chosen from a normal distribution with mean trajectory 4.5 
 
 
 
