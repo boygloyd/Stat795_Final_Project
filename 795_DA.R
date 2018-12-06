@@ -2,12 +2,13 @@
 library(MASS)
 library(corrplot)
 library(car)
+library(RCurl)
 
 rm(list=ls(all=TRUE)) # remove all previous objects from memory
 options(warn=-1)  # forces R to ignore all warning messages
 
 # Read in data, classify factors
-golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
+golf=read.csv(text=getURL("https://raw.githubusercontent.com/boygloyd/Stat795_Final_Project/master/Presentation/data/prov1_f.csv"), header=F)
 colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp", "total_distance", "t_disp", "traj")
 attach(golf)
 block = as.factor(block)

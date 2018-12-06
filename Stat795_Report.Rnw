@@ -62,9 +62,10 @@ opts_chunk$set(
 
 <<Load libraries and dataset, echo=FALSE>>=
 #Load Libraries
+library(RCurl)
 
 #Load Dataset
-golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
+golf=read.csv(text=getURL("https://raw.githubusercontent.com/boygloyd/Stat795_Final_Project/master/Presentation/data/prov1_f.csv"), header=F)
 colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp", "total_distance", "t_disp", "traj")
 @
 
