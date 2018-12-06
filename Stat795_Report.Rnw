@@ -64,7 +64,9 @@ opts_chunk$set(
 #Load Libraries
 
 #Load Dataset
-golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
+#golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
+
+golf = read.csv("C:/Users/Kelso Quan/Documents/SchoolWork/Stat795/finalProject/prov1_f.csv", header = F)
 colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp", "total_distance", "t_disp", "traj")
 @
 
@@ -113,7 +115,7 @@ In addition to the force being used to hit the ball, the trajectory of the ball 
 
 
 
-\subsection*{Model Selection/Inferences}
+\subsection*{Analysis of Covariance}
 
 
 
