@@ -112,13 +112,78 @@ In addition to the force being used to hit the ball, the trajectory of the ball 
 
 \subsection*{Exploratory Data Analysis}
 
+<< box plots, results="asis", echo=FALSE, include=TRUE>>=
+plot(ballmodel,total_distance, xlab="Ball model", ylab= "Total distance") #boxplot of total distance according to ball model type
 
+plot(ballmodel,carry, xlab="Ball model", ylab= "Carry") #boxplot of carry according to ball model type
+
+plot(ballmodel,c_disp, xlab="Ball model", ylab= "Carry Dispersion") #boxplot of carry dispersions according to ball model type
+@
+#From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
+
+
+<< Correlation plot, results="asis", echo=FALSE, include=TRUE>>=
+#correlation between the continuous variables
+pcorr = cor(as.data.frame(cbind(carry,c_disp,total_distance,t_disp,traj)))
+corrplot(pcorr)
+@
+Total distance has a high positive correlation with carry but a large negative correlation with trajectory. Total dispersion has a high positive correlation with carry dispersion. Trajectory has a high negative correlation with carry and total distance which seems logical.
+
+##More to be added in EDA
 
 \subsection*{Model Selection/Inferences}
+We are concerned about the total distance travelled by the ``new" balls. Since a controlled experiment was conducted, we have controlled blocks and treatement. Ball model is the treatment effect and block is the block effect. Trajectory which is a continuous variable is considered as covariate. Analysis of covariance model is selected since our explanatory variables are a mox of categorical and continuous variables.
+
+\bigskip
+
+A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis which is evident from the scatterplot.
+<< linearity of variables, results="asis", echo=FALSE, include=TRUE>>=
+plot(total_distance,traj)
+lines(lowess(total_distance,traj), col="blue")
+@
 
 
+<< ancova, results="asis", echo=FALSE, include=TRUE>>=
+#there are two methods to do the ancova analysis
+c.traj <- traj - mean(traj) #centering the variable
+#method 1
+fit.1 <- aov(lm(total_distance ~ factor(ballmodel) + factor(block) + c.traj , data=golf))
+summary(fit.1)
+#method 2
+fit.2 <- anova(lm(total_distance ~ factor(ballmodel) + factor(block) + c.traj , data=golf))
+fit.2
+@
+The ANCOVA table is as follows
+
+ \begin{table}[H]
+ \centering
+ \begin{tabular}{lcccc}
+ \hline
+ SOV & df & SS & MSS & F & P-value\\
+ \hline
+ Ball Model & 2 & 5803 & 2901.3 & 117.45  & 0 \\
+ Block &  41 & 11749 & 286.6 & 11.60 & 0 \\
+ Trajectory & 1 & 1810 & 1809.8 & 73.26 & 0 \\
+ Residuals  & 207 & 5114 & 24.7 & & \\
+ #Total     & 251 & 24476 & & & \\
+ \hline
+ \end{tabular}
+ \caption{ANCOVA table}
+ \end{table}
+
+Ball model, block and trajectory has a significant effect on the total distance travelled by a ball. 
+
+<< diagnostic plots, results="asis", echo=FALSE, include=TRUE>>=
+par(mfrow=c(2,2))
+plot(fit.2) #diagnostic plots
+@
+
+Since the diagnostic plots looks good with a couple of outliers which are not leverage points, residuals are fairly normally distributed.
+
+#Just initial findings (rough draft). Needs to be cleaned.
 
 \section*{Conclusion}
+
 
 
 
