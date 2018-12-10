@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.7)  10 DEC 2018 14:01
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  10 DEC 2018 13:08
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 entering extended mode
 **./Stat795_Report.tex
 (Stat795_Report.tex
 LaTeX2e <2018-04-01> patch level 5
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -20,6 +30,7 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
 sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -38,17 +49,38 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graph
 ics.cfg"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdfte
 x.def"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty
 "
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -60,12 +92,23 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 )
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\framed\framed.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+) (framed.sty
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip43
 \fb@frw=\dimen105
 \fb@frh=\dimen106
 \FrameRule=\dimen107
 \FrameSep=\dimen108
+<<<<<<< HEAD
 ) ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
@@ -74,6 +117,16 @@ sty"
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+=======
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty"
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count88
@@ -81,15 +134,24 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rotFPbot=\skip45
 \rot@float@box=\box26
 \rot@mess@toks=\toks15
+<<<<<<< HEAD
 ) ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\latexsym.st
 y"
+=======
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
 sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 \lst@mode=\count89
 \lst@gtempboxa=\box27
 \lst@token=\toks16
@@ -103,21 +165,35 @@ sty"
 \lst@lineno=\count94
 \lst@maxwidth=\dimen112
 
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.s
 ty"
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 \c@lstnumber=\count95
 \lst@skipnumbers=\count96
 \lst@framebox=\box28
 )
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
 cfg"
 File: listings.cfg 2018/09/02 1.7 listings configuration
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 ))
 Package: listings 2018/09/02 1.7 (Carsten Heinz)
 
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.st
 y"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 \wrapoverhang=\dimen113
 \WF@size=\dimen114
 \c@WF@wrappedlines=\count97
@@ -125,9 +201,16 @@ y"
 \WF@everypar=\toks17
 Package: wrapfig 2003/01/31  v 3.6
 )
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen115
 \ar@mcellbox=\box30
@@ -137,6 +220,7 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \backup@length=\skip47
 \ar@cellbox=\box31
 ))
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\placeins\placeins.
 sty"
 Package: placeins 2005/04/18  v 2.2
@@ -146,6 +230,16 @@ y"
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 ) (Stat795_Report.aux)
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
+Package: placeins 2005/04/18  v 2.2
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(Stat795_Report.aux)
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 \openout1 = `Stat795_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
@@ -161,8 +255,12 @@ LaTeX Font Info:    ... okay on input line 110.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
 LaTeX Font Info:    ... okay on input line 110.
 
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count98
 \scratchdimen=\dimen117
@@ -175,6 +273,7 @@ ii"
 \MPnumerator=\count102
 \makeMPintoPDFobject=\count103
 \everyMPtoPDFconversion=\toks20
+<<<<<<< HEAD
 )
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
 base.sty"
@@ -210,6 +309,33 @@ Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluate
 x.sty"
+=======
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -218,6 +344,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexc
 mds.sty"
 Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
@@ -225,6 +352,13 @@ Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
 ty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -239,7 +373,11 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -253,12 +391,21 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+=======
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
+<<<<<<< HEAD
 ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -403,6 +550,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 111.
 LaTeX Font Info:    Try loading font information for U+lasy on input line 111.
+<<<<<<< HEAD
  ("C:\Users\adity\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
@@ -471,6 +619,47 @@ ty/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
 Output written on Stat795_Report.pdf (7 pages, 172911 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
+=======
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+Package color Info: Redefining color shadecolor on input line 117.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 120.
+
+Overfull \hbox (177.55164pt too wide) in paragraph at lines 122--123
+[]\OT1/cmtt/m/n/10 ## Error in getURL("https://raw.githubusercontent.com/boyglo
+yd/Stat795[]Final[]Project/master/Presentation/data/prov1[]f.csv"):
+ []
+
+
+Overfull \hbox (3.4632pt too wide) in paragraph at lines 124--124
+[]\OT1/cmtt/m/n/10 ## Error in colnames(golf) = c("hitnum", "block", "ballnum",
+ "ballmodel", : object 'golf'
+ []
+
+[1
+
+{C:/Users/Kelso Quan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2] [3] (Stat795_Report.aux) ) 
+Here is how much of TeX's memory you used:
+ 3694 strings out of 492973
+ 52054 string characters out of 3135915
+ 116360 words of memory out of 3000000
+ 7512 multiletter control sequences out of 15000+200000
+ 8372 words of font info for 32 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,6n,32p,1422b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Stat795_Report.pdf (3 pages, 81383 bytes).
+PDF statistics:
+ 32 PDF objects out of 1000 (max. 8388607)
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
