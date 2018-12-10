@@ -113,12 +113,7 @@
 % Code to start knitr
 
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
-
-{\ttfamily\noindent\itshape\color{messagecolor}{\#\# Loading required package: bitops}}\end{kframe}
-\end{knitrout}
 \doublespacing
 
 
@@ -141,38 +136,26 @@ There were no observations excluded nor included. This analysis is going to use 
 \section*{Results}
 \subsection*{Experimental Design}
 
-%For right now this section is just word vomit (rough draft). Need to clean up later.
-
 In order to test to see if there is a difference in performance between brand new golf balls and the washed or refurbished golf balls that are being marketed as new, a well designed experiment must be created. A key element in any well designed experiment is randomization. Care must be taken to ensure that all locations are considered where both the new and refurbished balls are being sold and then a certain amount of both new and refurbished balls be purchased randomly from these locations. The desired sample size is computed from a a sample size estimation where 95\% power is achieved for an ANOVA model testing to see if there is a difference between the groups. The sample size chosen for this experiment is 84 observations per group for a total of 252 experimental units. Once the sample has been collected, golf balls will be placed into three seperate categories. New golf balls are balls that are actually new and never been used before. Washed golf balls are balls that are used, but simply washing them could get rid of any markings on them. Refurbished balls needed more than a simple washing, and need to be refinished in order for them to give the appearance of being a new golf ball. Each ball is then placed in a small container and given a unique ball number so that they can be randomly selected during testing.
 
 Once the sample has been collected a series of tests can be conducted to see if there truly is a difference in performance between the new balls and the refurbished balls. We will conduct one test at a time, because all that is needed to show that there is, in fact, a difference between the new balls and the refurbished ones is that they perform different in regards to a single metric. The easiest metric to measure is distance, so we will begin by measuring the distance off the tee for each of the groups of golf balls. In order to reduce the amount of error in the model, a machine will swing the golf club to ensure that the golf balls are being struck with a similar amount of force. Multiple measurements will be taken to assess the distance traveled for each ball. Carry distance will measure how far the ball travels in the air and total distance will measure how far the ball travels after it is done rolling. As wind conditions can be a confounding factor in the experiment, a randomized complete block design will be used so that the wind conditions will be similar within each block. Two balls of each kind will be included in each block, and the machine will be recalibrated between blocks to ensure that the force used to hit each ball is consistent. The average golfer swings a golf club at about 93 miles per hour, so this was the swing speed chosen when calibrating the machine.
 
 In addition to the force being used to hit the ball, the trajectory of the ball will have an impact on how far each ball will travel. Due to a variety of different reasons, different golfers hit the ball at different angles. Either they have drivers with different amounts of loft, they place the ball more forward or back in their stance or they fail to make contact with the ball at the optimal point in their swing. For these reasons the trajectory of the ball after impact was altered randomly for each shot and then measured. The trajectory for each shot was randomly chosen from a normal distribution with mean trajectory 4.5 and a standard deviation of 1.5. Since trajectory will have a large effect on the distance traveled, it will need to be included as a covariate in our model. 
 
-\end{document}
-
 \subsection*{Exploratory Data Analysis}
 
-\begin{kframe}
+
+\includegraphics[width=\maxwidth]{figure/box_plots-1} 
+
+From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(ballmodel, total\_distance, xlab = "{}Ball model"{}, ylab = "{}Total distance"{}): object 'ballmodel' not found}}
+\includegraphics[width=\maxwidth]{figure/Correlation_plot-1} 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(ballmodel, carry, xlab = "{}Ball model"{}, ylab = "{}Carry"{}): object 'ballmodel' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(ballmodel, c\_disp, xlab = "{}Ball model"{}, ylab = "{}Carry Dispersion"{}): object 'ballmodel' not found}}\end{kframe}
-#From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
-
-
-\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in cbind(carry, c\_disp, total\_distance, t\_disp, traj): object 'carry' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in corrplot(pcorr): could not find function "{}corrplot"{}}}\end{kframe}
 Total distance has a high positive correlation with carry but a large negative correlation with trajectory. Total dispersion has a high positive correlation with carry dispersion. Trajectory has a high negative correlation with carry and total distance which seems logical.
 
-##More to be added in EDA
+
+More to be added in EDA
 
 \subsection*{Model Selection/Inferences}
 We are concerned about the total distance travelled by the ``new" balls. Since a controlled experiment was conducted, we have controlled blocks and treatement. Ball model is the treatment effect and block is the block effect. Trajectory which is a continuous variable is considered as covariate. Analysis of covariance model is selected since our explanatory variables are a mox of categorical and continuous variables.
@@ -180,54 +163,41 @@ We are concerned about the total distance travelled by the ``new" balls. Since a
 \bigskip
 
 A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis which is evident from the scatterplot.
-\begin{kframe}
+
+\includegraphics[width=\maxwidth]{figure/linearity_of_variables-1} 
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(total\_distance, traj): object 'total\_distance' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in xy.coords(x, y, setLab = FALSE): object 'traj' not found}}\end{kframe}
 
 
-\begin{kframe}
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'traj' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(predvars, data, env): object 'c.traj' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in summary(fit.1): object 'fit.1' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(predvars, data, env): object 'c.traj' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'fit.2' not found}}\end{kframe}
 The ANCOVA table is as follows
 
- \begin{table}[H]
+ \begin{table}[ht]
  \centering
- \begin{tabular}{lcccc}
+ \begin{tabular}{lccccc}
  \hline
- SOV & df & SS & MSS & F & P-value\\
+ SOV & df & SS & MSS & F & p-value\\
  \hline
- Ball Model & 2 & 5803 & 2901.3 & 117.45  & 0 \\
- Block &  41 & 11749 & 286.6 & 11.60 & 0 \\
- Trajectory & 1 & 1810 & 1809.8 & 73.26 & 0 \\
- Residuals  & 207 & 5114 & 24.7 & & \\
- #Total     & 251 & 24476 & & & \\
+ Trajectory &  1  & 12154 & 12154 & 492.014 &  0 \\
+ Ballmodel & 2 &  1075 & 537 & 21.749 & 0\\
+ Block &  41 & 6133 & 150 &  6.055 & 0\\
+ Residuals  & 207 & 5114 & 25 &  &  \\
+ Total     & 251 & 24476 &  &  &   \\
  \hline
  \end{tabular}
  \caption{ANCOVA table}
  \end{table}
 
+
 Ball model, block and trajectory has a significant effect on the total distance travelled by a ball. 
 
-\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(fit.2): object 'fit.2' not found}}\end{kframe}
+\includegraphics[width=\maxwidth]{figure/diagnostic_plots-1} 
+
 
 Since the diagnostic plots looks good with a couple of outliers which are not leverage points, residuals are fairly normally distributed.
 
-#Just initial findings (rough draft). Needs to be cleaned.
 
 \section*{Conclusion}
 
