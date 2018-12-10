@@ -73,13 +73,7 @@ opts_chunk$set(
 library(RCurl)
 
 #Load Dataset
-<<<<<<< HEAD
-#golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
-
-golf = read.csv("C:/Users/Kelso Quan/Documents/SchoolWork/Stat795/finalProject/prov1_f.csv", header = F)
-=======
 golf=read.csv(text=getURL("https://raw.githubusercontent.com/boygloyd/Stat795_Final_Project/master/Presentation/data/prov1_f.csv"), header=F)
->>>>>>> 5626771a8d6269fadc6c72e6c533870a6cb9bd94
 colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp", "total_distance", "t_disp", "traj")
 @
 \doublespacing
@@ -144,10 +138,7 @@ plot(total_distance,traj)
 lines(lowess(total_distance,traj), col="blue")
 @
 
-<<<<<<< HEAD
 \subsection*{Analysis of Covariance}
-=======
->>>>>>> 5626771a8d6269fadc6c72e6c533870a6cb9bd94
 
 << ancova, results="asis", echo=FALSE, include=TRUE>>=
 #there are two methods to do the ancova analysis
