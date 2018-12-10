@@ -26,12 +26,13 @@ colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp",
 - Introduction/Methods
 - Design of Experiment
 - Model Selection/Diagnostics
-- Results
-- Conclusion
+- Results/Conclusion
 
 <!-- slide 3 -->
 
-## Data Set
+## Problem
+
+
 
 
 <!-- slide 4 -->
