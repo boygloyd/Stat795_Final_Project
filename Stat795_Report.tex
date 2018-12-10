@@ -114,12 +114,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-
-{\ttfamily\noindent\itshape\color{messagecolor}{\#\# Loading required package: bitops}}\end{kframe}
-\end{knitrout}
->>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 \doublespacing
 
 
@@ -170,30 +164,49 @@ We are concerned about the total distance travelled by the ``new" balls. Since a
 
 A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis which is evident from the scatterplot.
 
-<<<<<<< HEAD
 \includegraphics[width=\maxwidth]{figure/linearity_of_variables-1} 
-=======
+
+
+
 \subsection*{Analysis of Covariance}
->>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
+
+                   Df Sum Sq Mean Sq F value   Pr(>F)    
+factor(ballmodel)   2   5803  2901.3  117.45  < 2e-16 ***
+factor(block)      41  11749   286.6   11.60  < 2e-16 ***
+c.traj              1   1810  1809.8   73.26 2.56e-15 ***
+Residuals         207   5114    24.7                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Analysis of Variance Table
+
+Response: total_distance
+                   Df  Sum Sq Mean Sq F value    Pr(>F)    
+factor(ballmodel)   2  5802.6 2901.29 117.447 < 2.2e-16 ***
+factor(block)      41 11749.1  286.56  11.600 < 2.2e-16 ***
+c.traj              1  1809.8 1809.83  73.264 2.564e-15 ***
+Residuals         207  5113.5   24.70                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+                   Df Sum Sq Mean Sq F value   Pr(>F)    
+c.traj              1  12154   12154 492.014  < 2e-16 ***
+factor(ballmodel)   2   1075     537  21.749 2.67e-09 ***
+factor(block)      41   6133     150   6.055  < 2e-16 ***
+Residuals         207   5114      25                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Analysis of Variance Table
+
+Response: total_distance
+                   Df  Sum Sq Mean Sq  F value    Pr(>F)    
+c.traj              1 12154.2 12154.2 492.0143 < 2.2e-16 ***
+factor(ballmodel)   2  1074.5   537.3  21.7487 2.672e-09 ***
+factor(block)      41  6132.8   149.6   6.0551 < 2.2e-16 ***
+Residuals         207  5113.5    24.7                       
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 
 
-
-<<<<<<< HEAD
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(predvars, data, env): object 'c.traj' not found}}
-=======
-<<<<<<< HEAD
-
-=======
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in is.data.frame(data): object 'golf' not found}}
->>>>>>> f6b0629b4bb0c71053164d15a247557ab65b77c8
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in summary(fit.1): object 'fit.1' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(predvars, data, env): object 'c.traj' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'fit.2' not found}}\end{kframe}
->>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 The ANCOVA table is as follows
 
  \begin{table}[ht]
@@ -212,13 +225,7 @@ The ANCOVA table is as follows
  \caption{ANCOVA table}
  \end{table}
 
-<<<<<<< HEAD
 Ball model, block and trajectory has a significant effect on the total distance traveled by a ball. 
-=======
-
-Ball model, block and trajectory has a significant effect on the total distance travelled by a ball. 
->>>>>>> f6b0629b4bb0c71053164d15a247557ab65b77c8
-
 
 
 \includegraphics[width=\maxwidth]{figure/diagnostic_plots-1} 
