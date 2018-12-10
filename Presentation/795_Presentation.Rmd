@@ -23,10 +23,11 @@ colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp",
 
 ## Outline
 
-- Background
-- Exploratory Data Analysis
+- Introduction/Methods
+- Design of Experiment
 - Model Selection/Diagnostics
-- Inferences
+- Results
+- Conclusion
 
 <!-- slide 3 -->
 
