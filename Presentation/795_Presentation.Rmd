@@ -9,13 +9,13 @@ output: beamer_presentation
 
 ```{r, echo=FALSE, include=FALSE}
 # Load in libraries
-
+library(RCurl)
 
 rm(list=ls(all=TRUE)) # remove all previous objects from memory
 options(warn=-1)  # forces R to ignore all warning messages
 
-#Load in dataset
-golf=read.csv("~/GitTemp/Stat795_Final_Project/Presentation/data/prov1_f.csv",header=FALSE)
+#Load Dataset
+golf=read.csv(text=getURL("https://raw.githubusercontent.com/boygloyd/Stat795_Final_Project/master/Presentation/data/prov1_f.csv"), header=F)
 colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp", "total_distance", "t_disp", "traj")
 ```
 
@@ -23,10 +23,11 @@ colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp",
 
 ## Outline
 
-- Background
-- Exploratory Data Analysis
+- Introduction/Methods
+- Design of Experiment
 - Model Selection/Diagnostics
-- Inferences
+- Results
+- Conclusion
 
 <!-- slide 3 -->
 
