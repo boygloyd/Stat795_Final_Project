@@ -136,11 +136,7 @@ There were no observations excluded nor included. This analysis is going to use 
 \section*{Results}
 \subsection*{Experimental Design}
 
-<<<<<<< HEAD
-In order to test to see if there is a difference in performance between brand new golf balls and the washed or refurbished golf balls that are being marketed as new, a well designed experiment must be created. A key element in any well designed experiment is randomization. Care must be taken to ensure that all locations are considered where both the new and refurbished balls are being sold and then a certain amount of both new and refurbished balls be purchased randomly from these locations. The desired sample size is computed from a sample size estimation where 95\% power is achieved for an ANOVA model testing to see if there is a difference between the groups. The sample size chosen for this experiment is 84 observations per group for a total of 252 experimental units. Once the sample has been collected, golf balls will be placed into three seperate categories. New golf balls are balls that are actually new and never been used before. Washed golf balls are balls that are used, but simply washing them could get rid of any markings on them. Refurbished balls needed more than a simple washing, and needed to be refinished in order for them to give the appearance of being a new golf ball. Each ball is then placed in a small container and given an unique ball number so that they can be randomly selected during testing.
-=======
 In order to test to see if there is a difference in performance between brand new golf balls and the washed or refurbished golf balls that are being marketed as new, a well designed experiment must be created. A key element in any well designed experiment is randomization. Care must be taken to ensure that all locations are considered where both the new and refurbished balls are being sold and then a certain amount of both new and refurbished balls be purchased randomly from these locations. The desired sample size is computed from a sample size estimation where 95\% power is achieved for an ANOVA model testing to see if there is a difference between the groups. The sample size chosen for this experiment is 84 observations per group for a total of 252 experimental units. Once the sample has been collected, golf balls will be placed into three separate categories. New golf balls are balls that are actually new and never been used before. Washed golf balls are balls that are used, but simply washing them could get rid of any markings on them. Refurbished balls needed more than a simple washing, and needed to be refinished in order for them to give the appearance of being a new golf ball. Each ball is then placed in a small container and given an unique ball number so that they can be randomly selected during testing.
->>>>>>> f3fd54c1d17a16cf58ae170960c46dbdddeafc13
 
 Once the sample has been collected a series of tests can be conducted to see if there truly is a difference in performance between the new balls and the refurbished balls. We will conduct one test at a time because all that is needed to show that there is, in fact, a difference between the new balls and the refurbished ones is that they perform different in regards to a single metric. The easiest metric to measure is distance, so we will begin by measuring the distance off the tee for each of the groups of golf balls. In order to reduce the amount of error in the model, a machine will swing the golf club to ensure that the golf balls are being struck with a similar amount of force. Multiple measurements will be taken to assess the distance traveled for each ball. Carry distance will measure how far the ball travels in the air and total distance will measure how far the ball travels after it is done rolling. As wind conditions can be a confounding factor in the experiment, a randomized complete block design will be used so that the wind conditions will be similar within each block. Two balls of each kind will be included in each block, and the machine will be recalibrated between blocks to ensure that the force used to hit each ball is consistent. The average golfer swings a golf club at about 93 miles per hour, so this was the swing speed chosen when calibrating the machine.
 
@@ -148,14 +144,24 @@ In addition to the force being used to hit the ball, the trajectory of the ball 
 
 \subsection*{Exploratory Data Analysis}
 
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/box_plots_distance-1} 
 
-\includegraphics[width=\maxwidth]{figure/box_plots-1} 
+\end{knitrout}
 
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/box_plots_disp-1} 
+
+\end{knitrout}
 From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
 
-
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/Correlation_plot-1} 
 
+\end{knitrout}
 Total distance has a high positive correlation with carry but a large negative correlation with trajectory. Total dispersion has a high positive correlation with carry dispersion. Trajectory has a high negative correlation with carry and total distance which seems logical.
 
 
@@ -167,55 +173,15 @@ We are concerned about the total distance travelled by the ``new" balls. Since a
 \bigskip
 
 A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis which is evident from the scatterplot.
-
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/linearity_of_variables-1} 
-<<<<<<< HEAD
-=======
 
->>>>>>> f3fd54c1d17a16cf58ae170960c46dbdddeafc13
+\end{knitrout}
 
 
 \subsection*{Analysis of Covariance}
 
-<<<<<<< HEAD
-\subsection*{Analysis of Covariance}
-
-=======
->>>>>>> f3fd54c1d17a16cf58ae170960c46dbdddeafc13
-                   Df Sum Sq Mean Sq F value   Pr(>F)    
-factor(ballmodel)   2   5803  2901.3  117.45  < 2e-16 ***
-factor(block)      41  11749   286.6   11.60  < 2e-16 ***
-c.traj              1   1810  1809.8   73.26 2.56e-15 ***
-Residuals         207   5114    24.7                     
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-Analysis of Variance Table
-
-Response: total_distance
-                   Df  Sum Sq Mean Sq F value    Pr(>F)    
-factor(ballmodel)   2  5802.6 2901.29 117.447 < 2.2e-16 ***
-factor(block)      41 11749.1  286.56  11.600 < 2.2e-16 ***
-c.traj              1  1809.8 1809.83  73.264 2.564e-15 ***
-Residuals         207  5113.5   24.70                      
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-                   Df Sum Sq Mean Sq F value   Pr(>F)    
-c.traj              1  12154   12154 492.014  < 2e-16 ***
-factor(ballmodel)   2   1075     537  21.749 2.67e-09 ***
-factor(block)      41   6133     150   6.055  < 2e-16 ***
-Residuals         207   5114      25                     
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-Analysis of Variance Table
-
-Response: total_distance
-                   Df  Sum Sq Mean Sq  F value    Pr(>F)    
-c.traj              1 12154.2 12154.2 492.0143 < 2.2e-16 ***
-factor(ballmodel)   2  1074.5   537.3  21.7487 2.672e-09 ***
-factor(block)      41  6132.8   149.6   6.0551 < 2.2e-16 ***
-Residuals         207  5113.5    24.7                       
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 
 
@@ -239,9 +205,11 @@ The ANCOVA table is as follows
 
 Ball model, block and trajectory has a significant effect on the total distance traveled by a ball. 
 
-
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/diagnostic_plots-1} 
 
+\end{knitrout}
 
 Since the diagnostic plots looks good with a couple of outliers which are not leverage points, residuals are fairly normally distributed.
 
