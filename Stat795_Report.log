@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  5 DEC 2018 15:58
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  10 DEC 2018 12:49
->>>>>>> 5626771a8d6269fadc6c72e6c533870a6cb9bd94
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  10 DEC 2018 13:08
 entering extended mode
 **./Stat795_Report.tex
 (Stat795_Report.tex
@@ -388,45 +384,40 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 111.
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 Package color Info: Redefining color shadecolor on input line 117.
- [1
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 120.
 
-{C:/Users/Kelso Quan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (S
-tat795_Report.aux) ) 
+Overfull \hbox (177.55164pt too wide) in paragraph at lines 122--123
+[]\OT1/cmtt/m/n/10 ## Error in getURL("https://raw.githubusercontent.com/boyglo
+yd/Stat795[]Final[]Project/master/Presentation/data/prov1[]f.csv"):
+ []
+
+
+Overfull \hbox (3.4632pt too wide) in paragraph at lines 124--124
+[]\OT1/cmtt/m/n/10 ## Error in colnames(golf) = c("hitnum", "block", "ballnum",
+ "ballmodel", : object 'golf'
+ []
+
+[1
+
+{C:/Users/Kelso Quan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2] [3] (Stat795_Report.aux) ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 3684 strings out of 492973
- 51956 string characters out of 3135915
- 115312 words of memory out of 3000000
- 7504 multiletter control sequences out of 15000+200000
- 7905 words of font info for 30 fonts, out of 3000000 for 9000
+ 3694 strings out of 492973
+ 52054 string characters out of 3135915
+ 116360 words of memory out of 3000000
+ 7512 multiletter control sequences out of 15000+200000
+ 8372 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,32p,754b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Stat795_Report.pdf (2 pages, 64726 bytes).
+ 41i,6n,32p,1422b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Stat795_Report.pdf (3 pages, 81383 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
-=======
- 3698 strings out of 492649
- 52756 string characters out of 6129622
- 115604 words of memory out of 5000000
- 7524 multiletter control sequences out of 15000+600000
- 8540 words of font info for 33 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 41i,6n,32p,1419b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmitt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb>
-Output written on Stat795_Report.pdf (2 pages, 67209 bytes).
-PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
->>>>>>> 5626771a8d6269fadc6c72e6c533870a6cb9bd94
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
