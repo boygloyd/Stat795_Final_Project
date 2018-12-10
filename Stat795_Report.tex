@@ -113,12 +113,13 @@
 % Code to start knitr
 
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
+<<<<<<< HEAD
+=======
 
 {\ttfamily\noindent\itshape\color{messagecolor}{\#\# Loading required package: bitops}}\end{kframe}
 \end{knitrout}
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 \doublespacing
 
 
@@ -147,30 +148,20 @@ Once the sample has been collected a series of tests can be conducted to see if 
 
 In addition to the force being used to hit the ball, the trajectory of the ball will have an impact on how far each ball will travel. Due to a variety of different reasons, different golfers hit the ball at different angles. Either they have drivers with different amounts of loft, they place the ball more forward or back in their stance or they fail to make contact with the ball at the optimal point in their swing. For these reasons the trajectory of the ball after impact was altered randomly for each shot and then measured. The trajectory for each shot was randomly chosen from a normal distribution with mean trajectory 4.5 and a standard deviation of 1.5. Since trajectory will have a large effect on the distance traveled, it will need to be included as a covariate in our model. 
 
-\end{document}
-
 \subsection*{Exploratory Data Analysis}
 
-\begin{kframe}
+
+\includegraphics[width=\maxwidth]{figure/box_plots-1} 
+
+From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(ballmodel, total\_distance, xlab = "{}Ball model"{}, ylab = "{}Total distance"{}): object 'ballmodel' not found}}
+\includegraphics[width=\maxwidth]{figure/Correlation_plot-1} 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(ballmodel, carry, xlab = "{}Ball model"{}, ylab = "{}Carry"{}): object 'ballmodel' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(ballmodel, c\_disp, xlab = "{}Ball model"{}, ylab = "{}Carry Dispersion"{}): object 'ballmodel' not found}}\end{kframe}
-#From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
-
-
-\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in cbind(carry, c\_disp, total\_distance, t\_disp, traj): object 'carry' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in corrplot(pcorr): could not find function "{}corrplot"{}}}\end{kframe}
 Total distance has a high positive correlation with carry but a large negative correlation with trajectory. Total dispersion has a high positive correlation with carry dispersion. Trajectory has a high negative correlation with carry and total distance which seems logical.
 
-##More to be added in EDA
+
+More to be added in EDA
 
 \subsection*{Model Selection/Inferences}
 We are concerned about the total distance travelled by the ``new" balls. Since a controlled experiment was conducted, we have controlled blocks and treatement. Ball model is the treatment effect and block is the block effect. Trajectory which is a continuous variable is considered as covariate. Analysis of covariance model is selected since our explanatory variables are a mox of categorical and continuous variables.
@@ -178,55 +169,63 @@ We are concerned about the total distance travelled by the ``new" balls. Since a
 \bigskip
 
 A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis which is evident from the scatterplot.
-\begin{kframe}
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(total\_distance, traj): object 'total\_distance' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in xy.coords(x, y, setLab = FALSE): object 'traj' not found}}\end{kframe}
-
+<<<<<<< HEAD
+\includegraphics[width=\maxwidth]{figure/linearity_of_variables-1} 
+=======
 \subsection*{Analysis of Covariance}
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 
-\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'traj' not found}}
 
+<<<<<<< HEAD
 {\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(predvars, data, env): object 'c.traj' not found}}
+=======
+<<<<<<< HEAD
+
+=======
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in is.data.frame(data): object 'golf' not found}}
+>>>>>>> f6b0629b4bb0c71053164d15a247557ab65b77c8
 
 {\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in summary(fit.1): object 'fit.1' not found}}
 
 {\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(predvars, data, env): object 'c.traj' not found}}
 
 {\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'fit.2' not found}}\end{kframe}
+>>>>>>> e518f6f43e8b5126512871aab749e38668e808f7
 The ANCOVA table is as follows
 
- \begin{table}[H]
+ \begin{table}[ht]
  \centering
- \begin{tabular}{lcccc}
+ \begin{tabular}{lccccc}
  \hline
- SOV & df & SS & MSS & F & P-value\\
+ SOV & df & SS & MSS & F & p-value\\
  \hline
- Ball Model & 2 & 5803 & 2901.3 & 117.45  & 0 \\
- Block &  41 & 11749 & 286.6 & 11.60 & 0 \\
- Trajectory & 1 & 1810 & 1809.8 & 73.26 & 0 \\
- Residuals  & 207 & 5114 & 24.7 & & \\
- #Total     & 251 & 24476 & & & \\
+ Trajectory &  1  & 12154 & 12154 & 492.014 &  0 \\
+ Ballmodel & 2 &  1075 & 537 & 21.749 & 0\\
+ Block &  41 & 6133 & 150 &  6.055 & 0\\
+ Residuals  & 207 & 5114 & 25 &  &  \\
+ Total     & 251 & 24476 &  &  &   \\
  \hline
  \end{tabular}
  \caption{ANCOVA table}
  \end{table}
 
+<<<<<<< HEAD
 Ball model, block and trajectory has a significant effect on the total distance traveled by a ball. 
+=======
 
-\begin{kframe}
+Ball model, block and trajectory has a significant effect on the total distance travelled by a ball. 
+>>>>>>> f6b0629b4bb0c71053164d15a247557ab65b77c8
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(fit.2): object 'fit.2' not found}}\end{kframe}
+
+\includegraphics[width=\maxwidth]{figure/diagnostic_plots-1} 
+
 
 Since the diagnostic plots looks good with a couple of outliers which are not leverage points, residuals are fairly normally distributed.
 
-#Just initial findings (rough draft). Needs to be cleaned.
 
 \section*{Conclusion}
 
