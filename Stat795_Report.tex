@@ -157,11 +157,6 @@ In addition to the force being used to hit the ball, the trajectory of the ball 
 \end{knitrout}
 From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/Correlation_plot-1} 
-
-\end{knitrout}
 Total distance has a high positive correlation with carry but a large negative correlation with trajectory. Total dispersion has a high positive correlation with carry dispersion. Trajectory has a high negative correlation with carry and total distance which seems logical.
 
 
@@ -173,41 +168,60 @@ We are concerned about the total distance travelled by the ``new" balls. Since a
 \bigskip
 
 A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis which is evident from the scatterplot.
+
+\begin{figure}
+\centering
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/linearity_of_variables-1} 
 
 \end{knitrout}
-
+\end{figure}
 
 \subsection*{Analysis of Covariance}
 
 
 
 
+
 The ANCOVA table is as follows
 
- \begin{table}[ht]
- \centering
- \begin{tabular}{lccccc}
- \hline
- SOV & df & SS & MSS & F & p-value\\
- \hline
- Trajectory &  1  & 12154 & 12154 & 492.014 &  0 \\
- Ballmodel & 2 &  1075 & 537 & 21.749 & 0\\
- Block &  41 & 6133 & 150 &  6.055 & 0\\
- Residuals  & 207 & 5114 & 25 &  &  \\
- Total     & 251 & 24476 &  &  &   \\
- \hline
- \end{tabular}
- \caption{ANCOVA table}
- \end{table}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrr|}
+  \hline
+ & Sum Sq & Df & F value & Pr($>$F) \\ 
+  \hline
+(Intercept) & 330057.10 & 1 & 39346.39 & 0.0000 \\ 
+  Trajectory & 740.82 & 1 & 88.31 & 0.0000 \\ 
+  Block & 2637.49 & 41 & 7.67 & 0.0000 \\ 
+  BallModel & 770.36 & 2 & 45.92 & 0.0000 \\ 
+  Residuals & 1736.42 & 207 &  &  \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrr|}
+  \hline
+ & Sum Sq & Df & F value & Pr($>$F) \\ 
+  \hline
+(Intercept) & 11.18 & 1 & 0.14 & 0.7105 \\ 
+  Trajectory & 299.05 & 1 & 3.70 & 0.0559 \\ 
+  Block & 4846.24 & 41 & 1.46 & 0.0461 \\ 
+  BallModel & 418.27 & 2 & 2.58 & 0.0778 \\ 
+  Residuals & 16747.61 & 207 &  &  \\ 
+   \hline
+\end{tabular}
+\end{table}
+
 
 Ball model, block and trajectory has a significant effect on the total distance traveled by a ball. 
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/diagnostic_plots-1} 
+\includegraphics[width=\maxwidth]{figure/diagnostics-1} 
 
 \end{knitrout}
 
@@ -215,7 +229,6 @@ Since the diagnostic plots looks good with a couple of outliers which are not le
 
 
 \section*{Conclusion}
-
 
 
 

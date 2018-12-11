@@ -72,9 +72,16 @@ opts_chunk$set(
 #Load Libraries
 library(RCurl)
 library(corrplot)
+library(xtable)
+library(car)
+
 #Load Dataset
 golf=read.csv(text=getURL("https://raw.githubusercontent.com/boygloyd/Stat795_Final_Project/master/Presentation/data/prov1_f.csv"), header=F)
 colnames(golf) = c("hitnum", "block", "ballnum", "ballmodel", "carry", "c_disp", "total_distance", "t_disp", "traj")
+golf$ballmodel = gsub("NewProV1392","New",golf$ballmodel)
+golf$ballmodel = gsub("WashedProV1392","Washed",golf$ballmodel)
+golf$ballmodel = gsub("RefurbishedProV1392","Refurbished",golf$ballmodel)
+golf$ballmodel = as.factor(golf$ballmodel)
 attach(golf)
 @
 \doublespacing
@@ -109,6 +116,7 @@ In addition to the force being used to hit the ball, the trajectory of the ball 
 
 << box plots distance, echo=FALSE, include=TRUE, fig.height=3.5>>=
 par(mfrow=c(1,2))
+
 plot(ballmodel,total_distance, xlab="Ball model", ylab= "Total Distance") #boxplot of total distance according to ball model type
 
 plot(ballmodel,carry, xlab="Ball model", ylab= "Carry") #boxplot of carry according to ball model type
@@ -116,17 +124,13 @@ plot(ballmodel,carry, xlab="Ball model", ylab= "Carry") #boxplot of carry accord
 
 << box plots disp, echo=FALSE, include=TRUE, fig.height=3.5>>=
 par(mfrow=c(1,2))
-plot(ballmodel,t_disp, xlab="Ball model", ylab= "Carry Dispersion") #boxplot of carry dispersions according to ball model type
 
 plot(ballmodel,t_disp, xlab="Ball model", ylab= "Total Dispersion") #boxplot of carry according to ball model type
+
+plot(ballmodel,t_disp, xlab="Ball model", ylab= "Carry Dispersion") #boxplot of carry dispersions according to ball model type
 @
 From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
 
-<< Correlation plot, echo=FALSE, include=TRUE>>=
-#correlation between the continuous variables
-pcorr = cor(as.data.frame(cbind(carry,c_disp,total_distance,t_disp,traj)))
-corrplot(pcorr)
-@
 Total distance has a high positive correlation with carry but a large negative correlation with trajectory. Total dispersion has a high positive correlation with carry dispersion. Trajectory has a high negative correlation with carry and total distance which seems logical.
 
 
@@ -138,78 +142,86 @@ We are concerned about the total distance travelled by the ``new" balls. Since a
 \bigskip
 
 A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis which is evident from the scatterplot.
-<< linearity of variables, echo=FALSE, include=TRUE>>=
-plot(total_distance,traj)
-lines(lowess(total_distance,traj), col="blue")
-@
 
+\begin{figure}
+\centering
+<< linearity of variables, echo=FALSE, include=TRUE, fig.height=3.7, fig.width=5.4>>=
+par(mfrow=c(1,1))
+plot(carry,traj, xlab="Trajectory", ylab="Carry Distance")
+lines(lowess(carry,traj), col="blue")
+abline(lm(traj~carry,data=golf), col="red")
+legend("topright", col=c("blue", "red"), lty=1, legend=c("Lowess Smoother", "Linear Fit"), cex=0.7)
+@
+\end{figure}
 
 \subsection*{Analysis of Covariance}
 
 << ancova, echo=FALSE, include=FALSE>>=
-#there are two methods to do the ancova analysis
+#mean center trajectory for ANCOVA
 c.traj <- traj - mean(traj) #centering the variable
-#method 1
-fit.1 <- aov(lm(total_distance ~ factor(ballmodel) + factor(block)
-                + c.traj , data=golf))
-summary(fit.1)
-#method 2
-fit.2 <- anova(lm(total_distance ~ factor(ballmodel) + factor(block) 
-                + c.traj , data=golf))
-fit.2
 
+#fit an ANCOVA model for carry distance
+fit.carry = Anova(lm(carry~c.traj+factor(block)+factor(ballmodel), data = golf,contrasts=list(topic=contr.sum, sys=contr.sum)),type=3)
 
-fit.1a <- aov(lm(total_distance ~ c.traj + factor(ballmodel) 
-                 + factor(block) , data=golf))
-summary(fit.1a)
+#fit an ANCOVA model for carry dispersion
+fit.cd = Anova(lm(c_disp~c.traj+factor(block)+factor(ballmodel), data = golf,contrasts=list(topic=contr.sum, sys=contr.sum)),type=3)
 
-fit.2a <- anova(lm(total_distance ~ c.traj + factor(ballmodel) 
-                   + factor(block) , data=golf))
-fit.2a
+#fit an ANCOVA model for total distance
+fit.dist = Anova(lm(total_distance~c.traj+factor(block)+factor(ballmodel), data = golf,contrasts=list(topic=contr.sum, sys=contr.sum)),type=3)
 
-#The ANCOVA Table is as follows
+#fit an ANCOVA model for total dispersion
+fit.td = Anova(lm(t_disp~c.traj+factor(block)+factor(ballmodel), data = golf,contrasts=list(topic=contr.sum, sys=contr.sum)),type=3)
 
-# SOV               df Sum Sq Mean Sq F value   Pr(>F)    
-#c.traj              1  12154   12154 492.014  < 2e-16 ***
-#factor(ballmodel)   2   1075     537  21.749 2.67e-09 ***
-#factor(block)      41   6133     150   6.055  < 2e-16 ***
-#Total             251  24476   
-
-# Hence there is a significant effect of ball model, block and trajectory on the total distance.
-
+#aov path for diagnostics
+fit.c2 = aov(carry~c.traj+factor(block)+factor(ballmodel), data = golf)
 @
+
 
 
 The ANCOVA table is as follows
 
- \begin{table}[ht]
- \centering
- \begin{tabular}{lccccc}
- \hline
- SOV & df & SS & MSS & F & p-value\\
- \hline
- Trajectory &  1  & 12154 & 12154 & 492.014 &  0 \\
- Ballmodel & 2 &  1075 & 537 & 21.749 & 0\\
- Block &  41 & 6133 & 150 &  6.055 & 0\\
- Residuals  & 207 & 5114 & 25 &  &  \\
- Total     & 251 & 24476 &  &  &   \\
- \hline
- \end{tabular}
- \caption{ANCOVA table}
- \end{table}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrr|}
+  \hline
+ & Sum Sq & Df & F value & Pr($>$F) \\ 
+  \hline
+(Intercept) & 330057.10 & 1 & 39346.39 & 0.0000 \\ 
+  Trajectory & 740.82 & 1 & 88.31 & 0.0000 \\ 
+  Block & 2637.49 & 41 & 7.67 & 0.0000 \\ 
+  BallModel & 770.36 & 2 & 45.92 & 0.0000 \\ 
+  Residuals & 1736.42 & 207 &  &  \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrr|}
+  \hline
+ & Sum Sq & Df & F value & Pr($>$F) \\ 
+  \hline
+(Intercept) & 11.18 & 1 & 0.14 & 0.7105 \\ 
+  Trajectory & 299.05 & 1 & 3.70 & 0.0559 \\ 
+  Block & 4846.24 & 41 & 1.46 & 0.0461 \\ 
+  BallModel & 418.27 & 2 & 2.58 & 0.0778 \\ 
+  Residuals & 16747.61 & 207 &  &  \\ 
+   \hline
+\end{tabular}
+\end{table}
+
 
 Ball model, block and trajectory has a significant effect on the total distance traveled by a ball. 
 
-<< diagnostic plots, echo=FALSE, include=TRUE>>=
+<<diagnostics, echo=FALSE>>=
 par(mfrow=c(2,2))
-plot(fit.1a) #diagnostic plots
+plot(fit.c2)
 @
 
 Since the diagnostic plots looks good with a couple of outliers which are not leverage points, residuals are fairly normally distributed.
 
 
 \section*{Conclusion}
-
 
 
 
