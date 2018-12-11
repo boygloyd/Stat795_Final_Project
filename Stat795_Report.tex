@@ -155,32 +155,31 @@ In addition to the force being used to hit the ball, the trajectory of the ball 
 \includegraphics[width=\maxwidth]{figure/box_plots_disp-1} 
 
 \end{knitrout}
-From the box plots, we can see that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Carry dispersion is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls.
+From the box plots, it is evident that the total distance is considerably high for new balls compared to washed and refurbished balls. Washed balls travel higher total distance compared to the refurbished balls. The carry is almost same for new and refurbished balls whereas it is considerably less for washed balls as compared to new and refurbished balls. Total dispersion and carry dispersion is almost same for new and refurbished balls whereas it is slightly less for washed balls as compared to new and refurbished balls.
 
 Total distance has a high positive correlation with carry but a large negative correlation with trajectory. Total dispersion has a high positive correlation with carry dispersion. Trajectory has a high negative correlation with carry and total distance which seems logical.
 
-
-More to be added in EDA
-
 \subsection*{Model Selection/Inferences}
-We are concerned about the total distance travelled by the ``new" balls. Since a controlled experiment was conducted, we have controlled blocks and treatement. Ball model is the treatment effect and block is the block effect. Trajectory which is a continuous variable is considered as covariate. Analysis of covariance model is selected since our explanatory variables are a mox of categorical and continuous variables.
+We are concerned about the total distance travelled by the ``new" balls. Since a controlled experiment was conducted, we have controlled blocks and treatement. Ball model is the treatment effect and block is the block effect. Trajectory which is a continuous variable is considered as covariate. Analysis of covariance model is selected since our explanatory variables are a mix of categorical and continuous variables.
 
-\bigskip
+A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis. We plot the carry distance against the trajectory to check the linear relationship between them.
 
-A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis which is evident from the scatterplot.
-
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/linearity_of_variables-1} 
 
 \end{knitrout}
+\caption{Relationship between Carry Distance and Trajectory}
+\label{Relationship between covariate and Response}
 \end{figure}
+The red line indicates the linear fit and the blue curve indicates the fit obtained from lowess smoothing. Since both of the lines are very close to each other, we can consider the relationship between carry distance and trajectory as linear. Hence we can proceed with the Analysis of Covariance model.
+
 
 \subsection*{Analysis of Covariance}
 
-
+Since we are concerned about the impact of the covariate, black and treatment on the distance, we check the distance till the first impact, carry distance. An ANCOVA analysis was performed, where impact of covariate trajectory, block and ball model on the carry distance was performed.
 
 
 
@@ -216,18 +215,18 @@ The ANCOVA table is as follows
 \end{tabular}
 \end{table}
 
+Trajectory, Ball model and block has a significant effect on the total distance traveled by a ball. Similarly the impact of Trajectory, Ball model and block on total distance, total dispersion and carry dispersion was checked and it was found that Trajectory, Ball model and block has a significant effect on total distance. However, when carry dispersion and total dispersion was considered as the response variable, there was no significant effect of trajectory and ball model but only significant effect of blocks. This might be due to the different terrain and wind conditions at different blocks.
 
-Ball model, block and trajectory has a significant effect on the total distance traveled by a ball. 
+\subsection*{Model Diagnostics}
+
+Dignostic plots help us identify if the residuals deviates from the distributional assumptions and if there is any outlier and influential point.  
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/diagnostics-1} 
 
 \end{knitrout}
-
-Since the diagnostic plots looks good with a couple of outliers which are not leverage points, residuals are fairly normally distributed.
-
-
+The Residuals vs. Fitted plot indicates that the errors have a constant variance as there is no visible pattern for the residuals and the line is roughly horizontal around 0. Normal Q-Q plot indicates the points are close to the line except for a couple of deviations at either ends of line. Thus, the normality assumption of residuals is satisfied. Scale location plot indicates residuals are randomly spread accross the range of predictors. Hence the homoscedasticity assumption of residuals is satisfied. In the Residuals vs. Leverage plot, there is no point with high Cook's distance score. That is no outlying values present beyond the Cook's distance cutoff line on the upper right corner and lower right corner which means there is no influential point in the dataset. Since all the distributional assumptions of residuals are satisfied, we can consider our model to be a good model.
 \section*{Conclusion}
 
 
