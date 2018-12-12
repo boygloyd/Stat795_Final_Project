@@ -199,7 +199,7 @@ The ANCOVA table is as follows
 
 \bigskip
 
-Trajectory, Ball model and block has a significant effect on the carry distance of the ball. Similarly there is a significant impact of Trajectory, Ball model and block on total distance. However, when carry dispersion and total dispersion was considered as the response variable, there was no significant effect of trajectory and ball model but only significant effect of blocks. This is not surprising as there are different terrain and wind conditions in different blocks and we expect the different.
+Trajectory, Ball model and block has a significant effect on the carry distance of the ball. Similarly there is a significant impact of Trajectory, Ball model and block on total distance. However, when carry dispersion and total dispersion was considered as the response variable, there was no significant effect of trajectory and ball model but only significant effect of blocks. This is not surprising as there are different terrain and wind conditions in different blocks.
 
 \subsection*{Model Diagnostics}
 
