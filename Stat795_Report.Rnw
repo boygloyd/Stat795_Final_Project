@@ -91,7 +91,7 @@ attach(golf)
 
 %%%%% not done. missing results %%%%
 
-The golf ball manufacturer, Titlest, have claims against smaller companies that some of their brand new balls are not performing to standard. In addition, there is a lawsuit saying that the companies are taking nearly new balls or slightly used balls and either washing or refurbish them, then selling them off as new golf balls. The model of ball in question is ProV1392. 
+The golf ball manufacturer, Titlest, have claims against smaller companies that some of their brand new balls are not performing to standard. In addition, there is a lawsuit saying that the companies are taking nearly new balls or slightly used balls and either washing or refurbish them, then selling them off as new golf balls. The model of ball in question is ProV1392. By showing that there is a difference in average carry distance travel based on whether it is a brand new ball, washed, or refurbished ball is enough to show that those washed and refurbished balls do not perform at a brand new ball standard.
 
 \section*{Introduction}
 
