@@ -86,7 +86,7 @@ attach(golf)
 @
 \doublespacing
 
-
+\centering
 \section*{Executive Summary}
 
 %%%%% not done. missing results %%%%
