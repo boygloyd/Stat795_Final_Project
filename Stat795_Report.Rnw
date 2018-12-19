@@ -89,9 +89,8 @@ attach(golf)
 \centering
 \section*{Executive Summary}
 
-%%%%% not done. missing results %%%%
-
 The golf ball manufacturer, Titlest, have claims against smaller companies that some of their brand new balls are not performing to standard. In addition, there is a lawsuit saying that the companies are taking nearly new balls or slightly used balls and either washing or refurbish them, then selling them off as new golf balls. The model of ball in question is ProV1392. By showing that there is a difference in average carry distance travel based on whether it is a brand new ball, washed, or refurbished ball is enough to show that those washed and refurbished balls do not perform at a brand new ball standard.
+ANCOVA analysis indicated there is a difference between the performance of the ball associated with dispersion and the distance traveled by the ball for the three different types. Hence the golf ball manufacturer Titleist's concerns about loss of reputation seem correct. 
 
 \section*{Introduction}
 
@@ -211,7 +210,7 @@ plot(fit.c2)
 @
 The Residuals vs. Fitted plot indicates that the errors have a constant variance as there is no visible pattern for the residuals and the line is roughly horizontal around 0. Normal Q-Q plot indicates the points are close to the line except for a couple of deviations at either ends of line. Thus, the normality assumption of residuals is satisfied. Scale location plot indicates residuals are randomly spread accross the range of predictors. Hence the homoscedasticity assumption of residuals is satisfied. In the Residuals vs. Leverage plot, there is no point with high Cook's distance score. That is no outlying values present beyond the Cook's distance cutoff line on the upper right corner and lower right corner which means there is no influential point in the dataset. Since all the distributional assumptions of residuals are satisfied, we can consider our model to be a good model.
 \section*{Conclusion}
-There is a significant effect of covariate trajectory, block and treatment which is the ball models. Hence the golf ball manufacturer, Titlest's claim against the smaller companies is valid. Since the design was controlled with various block effects, the performance was tested in sufficiently large number of conditions and the evidence obtained from the analysis holds in good shape.
+There is a significant effect of covariate trajectory, block and treatment which is the ball models. Hence the golf ball manufacturer, Titlest's claim against the smaller companies is valid. Since the design was controlled with various block effects, the performance was tested in sufficiently large number of conditions and the evidence obtained from the analysis holds in good shape. Hence the golf ball manufacture Titleist has correctly initiated a lawsuit. The company has sufficient evidence to win the lawsuit. Since the performance of the washed and new balls was very similar, the manufacturer might want to think of a strategy to sell them as version/quality 2.
 
 
 \newpage
