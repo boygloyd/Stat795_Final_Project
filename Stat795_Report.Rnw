@@ -99,7 +99,7 @@ The golfing associations which govern the size of golf balls, R\&A and United St
 
 \section*{Methods}
 
-Hit number is just the observation number. Block is which group the ball is in. Total is the total distance the ball has moved. Carry is the distance from hitting the ball and where it initially lands. Ball model is whether the ball is a new ball, washed ball, or a refurbished ball. C\_ground is the how far the ball rolled after the initial landing of the ball. Traj is the angle which the ball's path has taken. Total dispersion is the distance away from where the ball would have gone if its trajectory was straight or centerline. Ballnum is the id of the ball. 
+Hit number is just the observation number. Block is which group the ball is in. Total is the total distance the ball has moved. Carry is the distance from hitting the ball and where it initially lands. Ball model is whether the ball is a new ball, washed ball, or a refurbished ball. C\_ground is the how far the ball rolled after the initial landing of the ball. Traj is the angle which the ball's path has taken. Total dispersion is the distance away from where the ball would have gone if its trajectory was straight or center line. Ballnum is the id of the ball. 
 There were no observations excluded nor included. This analysis is going to use R/RStudio software.
 
 \section*{Results}
@@ -133,7 +133,7 @@ From the box plots, it is evident that the carry distance and total distance is 
 Trajectory, which is considered as a covariate has a high negative correlation with carry and total distance which seems logical.
 
 \subsection*{Model Selection/Inferences}
-We are concerned about the total distance travelled by the ``new" balls. Since a controlled experiment was conducted, we have controlled blocks and treatement. Ball model is the treatment effect and block is the block effect. Trajectory which is a continuous variable is considered as covariate. Analysis of covariance model is selected since our explanatory variables are a mix of categorical and continuous variables.
+We are concerned about the total distance traveled by the ``new" balls. Since a controlled experiment was conducted, we have controlled blocks and treatment. Ball model is the treatment effect and block is the block effect. Trajectory which is a continuous variable is considered as covariate. Analysis of covariance model is selected since our explanatory variables are a mix of categorical and continuous variables.
 
 A linear relationship between the dependent variable and covariate is essential for a ANCOVA analysis. We plot the carry distance against the trajectory to check the linear relationship between them.
 
@@ -154,7 +154,7 @@ The red line indicates the linear fit and the blue curve indicates the fit obtai
 
 \subsection*{Analysis of Covariance}
 
-Since we are concerned about the impact of the covariate, black and treatment on the distance, we check the distance till the first impact, carry distance. An ANCOVA analysis was performed, where impact of covariate trajectory, block and ball model on the carry distance was performed. Since we want to identify the effects for trajectory, ballmodel and block when the effects for the others were adjusted, we use type III sum of squares. The type III sum of square methods evaluates the contribution of each factor after considering the contributions of all the other factors/effects in the model.
+Since we are concerned about the impact of the covariate, black and treatment on the distance, we check the distance till the first impact, carry distance. An ANCOVA analysis was performed, where impact of covariate trajectory, block and ball model on the carry distance was performed. Since we want to identify the effects for trajectory, ball model and block when the effects for the others were adjusted, we use type III sum of squares. The type III sum of square methods evaluates the contribution of each factor after considering the contributions of all the other factors/effects in the model.
 
 << ancova, echo=FALSE, include=FALSE>>=
 #mean center trajectory for ANCOVA
@@ -187,7 +187,7 @@ The ANCOVA table is as follows
 (Intercept) & 330057.10 & 1 & 39346.39 & 0.0000 \\ 
   Trajectory & 740.82 & 1 & 88.31 & 0.0000 \\ 
   Block & 2637.49 & 41 & 7.67 & 0.0000 \\ 
-  BallModel & 770.36 & 2 & 45.92 & 0.0000 \\ 
+  Ball Model & 770.36 & 2 & 45.92 & 0.0000 \\ 
   Residuals & 1736.42 & 207 &  &  \\ 
    \hline
 \end{tabular}
@@ -202,13 +202,13 @@ Trajectory, Ball model and block has a significant effect on the carry distance 
 
 \subsection*{Model Diagnostics}
 
-Dignostic plots help us identify if the residuals deviates from the distributional assumptions and if there is any outlier and influential point.  
+Diagnostic plots help us identify if the residuals deviates from the distributional assumptions and if there are any outliers and influential points.  
 
 <<diagnostics, echo=FALSE, fig.height=5.25>>=
 par(mfrow=c(2,2))
 plot(fit.c2)
 @
-The Residuals vs. Fitted plot indicates that the errors have a constant variance as there is no visible pattern for the residuals and the line is roughly horizontal around 0. Normal Q-Q plot indicates the points are close to the line except for a couple of deviations at either ends of line. Thus, the normality assumption of residuals is satisfied. Scale location plot indicates residuals are randomly spread accross the range of predictors. Hence the homoscedasticity assumption of residuals is satisfied. In the Residuals vs. Leverage plot, there is no point with high Cook's distance score. That is no outlying values present beyond the Cook's distance cutoff line on the upper right corner and lower right corner which means there is no influential point in the dataset. Since all the distributional assumptions of residuals are satisfied, we can consider our model to be a good model.
+The Residuals vs. Fitted plot indicates that the errors have a constant variance as there is no visible pattern for the residuals and the line is roughly horizontal around 0. Normal Q-Q plot indicates the points are close to the line except for a couple of deviations at either ends of line. Thus, the normality assumption of residuals is satisfied. Scale location plot indicates residuals are randomly spread across the range of predictors. Hence the homoscedasticity assumption of residuals is satisfied. In the Residuals vs. Leverage plot, there is no point with high Cook's distance score. That is no outlying values present beyond the Cook's distance cutoff line on the upper right corner and lower right corner which means there is no influential point in the data set. Since all the distributional assumptions of residuals are satisfied, we can consider our model to be a good model.
 \section*{Conclusion}
 There is a significant effect of covariate trajectory, block and treatment which is the ball models. Hence the golf ball manufacturer, Titlest's claim against the smaller companies is valid. Since the design was controlled with various block effects, the performance was tested in sufficiently large number of conditions and the evidence obtained from the analysis holds in good shape. Hence the golf ball manufacture Titleist has correctly initiated a lawsuit. The company has sufficient evidence to win the lawsuit. Since the performance of the washed and new balls was very similar, the manufacturer might want to think of a strategy to sell them as version/quality 2.
 
@@ -227,7 +227,7 @@ The ANCOVA table when total distance is considered as the response variable is a
 (Intercept) & 379839 & 1 & 15376.2874 & 0.0000 \\ 
   Trajectory & 1810 & 1 & 73.2638 & 0.0000 \\ 
   Block & 6133 & 41 & 6.0551 & 0.0000 \\ 
-  BallModel & 1526 & 2 & 30.8796 & 0.0000 \\ 
+  Ball Model & 1526 & 2 & 30.8796 & 0.0000 \\ 
   Residuals & 5114 & 207 &  &  \\ 
    \hline
 \end{tabular}
@@ -249,7 +249,7 @@ The ANCOVA table when total dispersion is considered as the response variable is
 (Intercept) & 11.2 & 1 & 0.1382 & 0.71046 \\ 
   Trajectory & 299.1 & 1 & 3.6963 & 0.05591 \\ 
   Block & 4846.2 & 41 & 1.4610 & 0.04611 \\ 
-  BallModel & 418.3 & 2 & 2.549 & 0.07784 \\ 
+  Ball Model & 418.3 & 2 & 2.549 & 0.07784 \\ 
   Residuals & 16747.6 & 207 &  &  \\ 
    \hline
 \end{tabular}
@@ -267,7 +267,7 @@ The ANCOVA table when carry dispersion is considered as the response variable is
 (Intercept) & 0.5 & 1 & 0.0088 & 0.92545 \\ 
   Trajectory & 165.6 & 1 & 2.7057 & 0.10150 \\ 
   Block & 3823.8 & 41 & 1.5242 & 0.03046 \\ 
-  BallModel & 279.4 & 2 & 2.2827 & 0.10457 \\ 
+  Ball Model & 279.4 & 2 & 2.2827 & 0.10457 \\ 
   Residuals & 12666.2 & 207 &  &  \\ 
    \hline
 \end{tabular}
